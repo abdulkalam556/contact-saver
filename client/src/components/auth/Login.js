@@ -35,21 +35,15 @@ const Login = (props) => {
     if (email === '' || password === '') {
       setAlert('Please fill in all fields', 'danger');
     } else {
-      console.log({ email, password });
       loginUser({
         email,
         password,
       });
-      console.log({ email, password });
     }
   };
 
   const demoLogin = () => {
     setUser({ ...user, email: 'abdul@gmail.com', password: '123456' });
-    loginUser({
-      email,
-      password,
-    });
   };
 
   return (
