@@ -42,6 +42,10 @@ const Login = (props) => {
     }
   };
 
+  const demoLogin = () => {
+    loginUser({ eamil: 'abdul@gmail.com', password: '123456' });
+  };
+
   return (
     <div className='form-container'>
       <h1>
@@ -74,6 +78,12 @@ const Login = (props) => {
           className='btn btn-primary btn-block'
         />
       </form>
+      <input
+        type='submit'
+        value='Demo Login'
+        className='btn btn-primary btn-block'
+        onclick={demoLogin}
+      />
     </div>
   );
 };
