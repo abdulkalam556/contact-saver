@@ -35,10 +35,12 @@ const Login = (props) => {
     if (email === '' || password === '') {
       setAlert('Please fill in all fields', 'danger');
     } else {
+      console.log({ email, password });
       loginUser({
         email,
         password,
       });
+      console.log({ email, password });
     }
   };
 
@@ -78,13 +80,14 @@ const Login = (props) => {
           value='Login'
           className='btn btn-primary btn-block'
         />
+
+        <input
+          type='submit'
+          value='Demo Login'
+          className='btn btn-primary btn-block'
+          onclick={demoLogin}
+        />
       </form>
-      <input
-        type='submit'
-        value='Demo Login'
-        className='btn btn-primary btn-block'
-        onclick={demoLogin}
-      />
     </div>
   );
 };
