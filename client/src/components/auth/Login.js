@@ -45,7 +45,7 @@ const Login = (props) => {
   };
 
   const demoLogin = () => {
-    setUser({ email: 'abdul@gmail.com', password: '123456' });
+    setUser({ ...user, email: 'abdul@gmail.com', password: '123456' });
     onSubmit();
   };
 
