@@ -46,7 +46,10 @@ const Login = (props) => {
 
   const demoLogin = () => {
     setUser({ ...user, email: 'abdul@gmail.com', password: '123456' });
-    onSubmit();
+    loginUser({
+      email,
+      password,
+    });
   };
 
   return (
@@ -73,13 +76,10 @@ const Login = (props) => {
           value='Login'
           className='btn btn-primary btn-block'
         />
-
-        <input
-          value='Demo Login'
-          className='btn btn-primary btn-block'
-          onclick={demoLogin}
-        />
       </form>
+      <button className='btn btn-primary btn-block' onClick={demoLogin}>
+        Demo Login
+      </button>
     </div>
   );
 };
