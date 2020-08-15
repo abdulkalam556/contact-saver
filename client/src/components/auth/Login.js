@@ -75,7 +75,6 @@ const Login = (props) => {
         />
 
         <input
-          type='submit'
           value='Demo Login'
           className='btn btn-primary btn-block'
           onclick={demoLogin}
