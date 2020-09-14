@@ -20,9 +20,6 @@ const Navbar = ({ title, icon }) => {
     <Fragment>
       <li>Hello {user && user.name}</li>
       <li>
-        <Link to='/about'>About</Link>
-      </li>
-      <li>
         <a onClick={onLogout} href='#!'>
           <i className='fas fa-sign-out-alt'></i>{' '}
           <span className='hide-sm'>Logout</span>
@@ -33,9 +30,6 @@ const Navbar = ({ title, icon }) => {
 
   const guestLinks = (
     <Fragment>
-      <li>
-        <Link to='/about'>About</Link>
-      </li>
       <li>
         <Link to='/register'>Register</Link>
       </li>
@@ -48,7 +42,9 @@ const Navbar = ({ title, icon }) => {
   return (
     <div className='navbar bg-primary'>
       <h1>
-        <i className={icon}> {title}</i>
+        <Link to='/about'>
+          <i className={icon}> {title}</i>
+        </Link>
       </h1>
       <ul>{isAuthenticated ? authLinks : guestLinks}</ul>
     </div>
