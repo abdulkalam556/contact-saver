@@ -20,7 +20,7 @@ const Navbar = ({ title, icon }) => {
     <Fragment>
       <li>Hello {user && user.name}</li>
       <li>
-        <Link to='/about'>Login</Link>
+        <Link to='/about'>About</Link>
       </li>
       <li>
         <a onClick={onLogout} href='#!'>
@@ -33,6 +33,9 @@ const Navbar = ({ title, icon }) => {
 
   const guestLinks = (
     <Fragment>
+      <li>
+        <Link to='/about'>About</Link>
+      </li>
       <li>
         <Link to='/register'>Register</Link>
       </li>
