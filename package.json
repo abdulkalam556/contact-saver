@@ -1,5 +1,5 @@
 {
-  "name": "contact-keeper",
+  "name": "contact-saver",
   "version": "1.0.0",
   "description": "contact manager app",
   "main": "server.js",
